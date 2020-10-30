@@ -1,0 +1,62 @@
+<html>
+<head><title>My Family</title></head>
+<body>
+    <p class='header'>My Family</p>
+    
+    <img id="album" src="Family (2).jpg">
+    <h1 id="name"></h1>
+ <div>
+   <button type="button" onclick="nextslide()"> Next  </button>
+ </div>
+ <script>var images = [
+    "Fathher.jpg",
+    "Reshmi.jpg",
+    "My Picture.jpg",
+    "Agnes.jpg",
+         ];
+ var names =[
+ "Paulvin Varghese(Father)",
+"Reshmi Antony(Mother)",
+"Allen Paulvin(Elder Brother)",
+"Agnes Paulvin(Younger Sister)",
+
+         ]
+  
+  var i = 0;
+  function nextslide() { 
+   
+     if(i == 4)
+       {
+         i=0;
+       }
+     
+      document.getElementById("album").src = images[i];
+      document.getElementById("name").innerHTML = names[i];
+    i++;
+   
+  }
+ 
+ 
+  </script>
+  <style>body{
+    text-align:center;
+  }  
+  .header
+  {
+    font-weight:bold;
+    font-size:30px;
+  }
+  
+  #album
+  {
+   
+    border-bottom: 3px solid #689F38;   
+    padding: 2px;
+    
+    height: 400px;
+  }
+  </style>
+
+</body>
+
+</html>
